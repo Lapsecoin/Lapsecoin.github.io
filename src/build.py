@@ -51,6 +51,9 @@ PAGES = [
     ("downloads.html", "downloads", "Download LapseCoin",
      "Download LapseCoin for Windows and Linux. The newest releases with the SHA256 and "
      "VirusTotal result of each installer."),
+    ("privacy.html", "privacy", "Privacy policy | LapseCoin",
+     "What LapseCoin and this website do with your data: no accounts, keys stay on your "
+     "device, what the public network shows, and which outside services are contacted."),
     ("wallets.html", "wallets", "Wallet integration | LapseCoin",
      "How a wallet derives a LapseCoin key from the recovery phrase a user already "
      "has, using BIP-39, BIP-85 and seeded FALCON-512 key generation, with test vectors."),
@@ -140,7 +143,7 @@ def footer():
 <div class="foot-col"><b>Documentation</b>{docs}</div>
 <div class="foot-col"><b>Community</b><a href="{DISCORD}">Discord</a><a href="{GITHUB}">GitHub</a><a href="{LIVE_NODE}">Live node</a><a href="index.html#support">Support {NAME}</a></div>
 </div>
-<p class="legal">{NAME} is open source, released under the MIT license.</p>
+<p class="legal">{NAME} is open source, released under the MIT license. <a href="privacy.html">Privacy policy</a></p>
 </div></footer>"""
 
 
