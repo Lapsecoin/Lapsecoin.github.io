@@ -133,6 +133,8 @@ td:first-child { font-family: var(--mono); font-size: 12.5px; }
 .hero .actions { margin-top: 28px; }
 .btn { display: inline-flex; align-items: center; justify-content: center; height: 36px; padding: 0 14px; border-radius: var(--radius-sm); border: 1px solid var(--line-strong); color: var(--ink); text-decoration: none; font: inherit; font-weight: 550; font-size: 14px; background: var(--surface); cursor: pointer; transition: background .12s, border-color .12s; }
 .btn:hover { background: var(--hover); }
+.btn[aria-disabled="true"] { color: var(--ink-dim); background: transparent; border-style: dashed; cursor: default; }
+.btn[aria-disabled="true"]:hover { background: transparent; }
 .btn.lg { height: 44px; padding: 0 20px; font-size: 15px; }
 .btn.primary { background: var(--link); border-color: var(--link); color: #fffefb; }
 .btn.primary:hover { background: #8f3f06; border-color: #8f3f06; }

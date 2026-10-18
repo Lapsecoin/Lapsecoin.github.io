@@ -5,7 +5,6 @@
   var latest = document.getElementById("dl-latest");
   var older = document.getElementById("dl-older");
   if (!latest || !older) return;
-  var STORE = "https://apps.microsoft.com/detail/xpdcf9572b3766";
 
   function el(tag, cls, text) {
     var e = document.createElement(tag);
@@ -36,14 +35,20 @@
     latest.lastChild.appendChild(link("https://github.com/Lapsecoin/core/releases", "Open the releases page on GitHub"));
   }
 
-  function renderLatest(r, stable) {
+  function renderLatest(r, stable, store) {
     var p = el("section", "panel dl-latest");
     var main = el("div", "dl-main");
     main.appendChild(el("small", null, "Latest release, " + day(r.published)));
     main.appendChild(el("h2", null, r.version));
     var actions = el("div", "actions");
     actions.appendChild(link(r.msi.url, "Download for Windows (" + mb(r.msi.size) + ")", "btn primary lg"));
-    actions.appendChild(link(STORE, "Microsoft Store", "btn lg"));
+    if (store) {
+      actions.appendChild(link(store, "Microsoft Store", "btn lg"));
+    } else {
+      var soon = el("span", "btn lg", "Microsoft Store, coming soon");
+      soon.setAttribute("aria-disabled", "true");
+      actions.appendChild(soon);
+    }
     if (r.linux) actions.appendChild(link(r.linux.url, "Linux (" + mb(r.linux.size) + ")", "btn lg"));
     main.appendChild(actions);
     main.appendChild(link(r.url, "Release notes", "dl-notes"));
@@ -108,7 +113,7 @@
     .then(function (data) {
       var list = (data && data.releases) || [];
       if (!list.length) return fail();
-      renderLatest(list[0], data.latest_msi);
+      renderLatest(list[0], data.latest_msi, data.store_url);
       renderOlder(list.slice(1));
       document.getElementById("dl-note").hidden = false;
     })
