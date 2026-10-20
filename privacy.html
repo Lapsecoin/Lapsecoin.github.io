@@ -37,7 +37,7 @@
 <div class="ext"><a href="https://discord.gg/FP2d8JmK6r"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059.05.05 0 0 0-.018-.011 8.9 8.9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.05.05 0 0 1 .015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/></svg><span>Discord</span></a><a href="https://github.com/Lapsecoin/core"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a></div>
 </div></header>
 <main><div class="wrap">
-<div class="page-head"><h1>Privacy policy</h1><p>What LapseCoin and this website do with your data. Last updated 18 October 2026.</p></div>
+<div class="page-head"><h1>Privacy policy</h1><p>What LapseCoin and this website do with your data. Last updated 20 October 2026.</p></div>
 <div class="doc"><div class="prose">
 <section id="summary">
 <h2>In short</h2>
@@ -45,7 +45,7 @@
 <li>LapseCoin has no accounts and the project does not collect your personal information. We cannot see your wallet, your balance or your keys.</li>
 <li>Your wallet key, recovery phrase and passphrase stay on your device. They are never sent anywhere.</li>
 <li>The LapseCoin network is public. Transactions and the blocks nodes build are visible to everyone, permanently.</li>
-<li>The program has no analytics or crash reporting. This website uses Google Analytics.</li>
+<li>The program has no analytics. It sends one thing without asking: a report when it crashes, with no names, folders or addresses in it (see Crash reports below). This website uses Google Analytics.</li>
 <li>We do not sell data.</li>
 </ul>
 </section>
@@ -68,6 +68,20 @@
 </ul>
 <p>Each of these services has its own privacy policy. The program sends them only what the request itself needs.</p>
 </section>
+<section id="crashes">
+<h2>Crash reports</h2>
+<p>From the first release after 20 October 2026, the program reports a critical crash by itself, so that it can be fixed without anyone having to ask you for files. This happens only when the program stops because of an error, at start-up or while it runs, and the next time it starts after a crash that ended it outright. Nothing is sent otherwise, and nothing is sent while the program runs normally.</p>
+<h3>What is sent</h3>
+<ul>
+<li>The error and where in the program it happened (a traceback), and the last few start-up steps.</li>
+<li>The LapseCoin version, the Windows build number, the processor architecture, the Python version, and whether it ran as the Microsoft Store package.</li>
+</ul>
+<p>Before it is sent, your account name, folder paths and any LapseCoin address are taken out. Your wallet, keys, recovery phrase, passphrase, balance and transactions are not part of it, and there is no identifier that could link two reports to the same person.</p>
+<h3>Where it goes</h3>
+<p>It goes to a small service run by the project, which turns it into a public issue on <a href="https://github.com/Lapsecoin/core/issues">GitHub</a>, one per kind of crash, with a short comment for each repeat. Anyone can read those issues. The service sees your IP address while it handles the request. It does not store it, and it keeps only a one-way hash of it for two days to limit abuse. The service runs on Cloudflare, which handles the connection under its own privacy policy.</p>
+<h3>Turning it off</h3>
+<p>Set the environment variable <code>LAPSECOIN_CRASH_REPORTS</code> to <code>0</code>, or put an empty file named <code>crash-reports-off</code> in your data folder (<code>%USERPROFILE%\LapseCoin</code>). The program saves a crash report to a file there either way, so you can read exactly what it would send: <code>lapsecoin-crash.log</code>.</p>
+</section>
 <section id="website">
 <h2>This website</h2>
 <p>The website is hosted on GitHub Pages, which keeps server logs under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>. The pages use Google Analytics to count visits. It sets cookies and records usage such as pages viewed, approximate location, browser and device type. You can block it with a browser extension or your browser's tracking settings, and the site works without it. The download page loads the list of releases from this site and links to GitHub for the files.</p>
@@ -85,7 +99,7 @@
 <h2>Changes and contact</h2>
 <p>If this policy changes, the date at the top changes with it, and the history is public in the <a href="https://github.com/Lapsecoin/lapsecoin.github.io">site repository</a>. Questions can go to us on <a href="https://discord.gg/FP2d8JmK6r">Discord</a> or as an issue on <a href="https://github.com/Lapsecoin/core/issues">GitHub</a>.</p>
 </section>
-</div><aside class="toc" aria-label="On this page"><b>On this page</b><a href="#summary">In short</a><a href="#app">The LapseCoin program</a><a href="#website">This website</a><a href="#store">Microsoft Store</a><a href="#rights">Your choices</a><a href="#changes">Changes and contact</a></aside>
+</div><aside class="toc" aria-label="On this page"><b>On this page</b><a href="#summary">In short</a><a href="#app">The LapseCoin program</a><a href="#crashes">Crash reports</a><a href="#website">This website</a><a href="#store">Microsoft Store</a><a href="#rights">Your choices</a><a href="#changes">Changes and contact</a></aside>
 </div>
 </div></main>
 <footer><div class="wrap">
