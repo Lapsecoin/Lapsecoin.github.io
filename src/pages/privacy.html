@@ -40,7 +40,7 @@
 </ul>
 <p>Before it is sent, your account name, folder paths and any LapseCoin address are taken out. Your wallet, keys, recovery phrase, passphrase, balance and transactions are not part of it, and there is no identifier that could link two reports to the same person.</p>
 <h3>Where it goes</h3>
-<p>The program files it directly as an issue in a public GitHub repository, <a href="https://github.com/Lapsecoin/crash-reports">Lapsecoin/crash-reports</a>, one issue per kind of crash, with a short comment for each repeat. Anyone can read those issues. GitHub sees your IP address when the report is sent, as with any request to it, and handles it under its own privacy statement. The project does not run a server that receives these reports and does not keep your address.</p>
+<p>The program files it directly as an issue in the public <a href="https://github.com/Lapsecoin/core/issues?q=label%3Acrash-report">LapseCoin issue tracker</a>, labelled crash-report, one issue per kind of crash, with a short comment for each repeat. Anyone can read those issues. GitHub sees your IP address when the report is sent, as with any request to it, and handles it under its own privacy statement. The project does not run a server that receives these reports and does not keep your address.</p>
 <h3>Turning it off</h3>
 <p>Set the environment variable <code>LAPSECOIN_CRASH_REPORTS</code> to <code>0</code>, or put an empty file named <code>crash-reports-off</code> in your data folder (<code>%USERPROFILE%\LapseCoin</code>). The program saves a crash report to a file there either way, so you can read exactly what it would send: <code>lapsecoin-crash.log</code>.</p>
 </section>
