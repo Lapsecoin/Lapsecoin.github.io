@@ -1,5 +1,5 @@
 <div class="wrap">
-<div class="page-head"><h1>Privacy policy</h1><p>What LapseCoin and this website do with your data. Last updated 20 October 2026.</p></div>
+<div class="page-head"><h1>Privacy policy</h1><p>What LapseCoin and this website do with your data. Last updated 22 October 2026.</p></div>
 <div class="doc"><div class="prose">
 <section id="summary">
 <h2>In short</h2>
@@ -15,7 +15,7 @@
 <h2>The LapseCoin program</h2>
 <p>LapseCoin is open source software that runs on your computer as a wallet and network node. The project runs no server that receives your data from the program. What the program does is below.</p>
 <h3>Stored on your device</h3>
-<p>Your wallet file, chain database, peer list and logs are kept in a folder on your computer (<code>%USERPROFILE%\LapseCoin</code> for the Microsoft Store version, <code>%LOCALAPPDATA%\LapseCoin</code> for the installer version). The wallet file is encrypted with your passphrase. We have no copy and cannot recover it for you. Keep your recovery phrase safe.</p>
+<p>Your wallet file, chain database, peer list and logs are kept in a folder on your computer (<code>%USERPROFILE%\LapseCoin</code> from version 1.1.6, <code>%LOCALAPPDATA%\LapseCoin</code> before). The wallet file is encrypted with your passphrase. We have no copy and cannot recover it for you. Keep your recovery phrase safe.</p>
 <h3>Visible to the network</h3>
 <ul>
 <li><strong>Transactions:</strong> addresses, amounts and any memo you add are recorded on the public chain and cannot be removed.</li>
@@ -32,13 +32,13 @@
 </section>
 <section id="crashes">
 <h2>Crash reports</h2>
-<p>From the first release after 20 October 2026, the program reports a critical crash by itself, so that it can be fixed without anyone having to ask you for files. This happens only when the program stops because of an error, at start-up or while it runs, and the next time it starts after a crash that ended it outright. Nothing is sent otherwise, and nothing is sent while the program runs normally.</p>
+<p>From version 1.1.6, the program reports a critical crash by itself, so that it can be fixed without anyone having to ask you for files. This happens only when the program stops because of an error, at start-up or while it runs, or when Windows ends it for a fault (a crash in native code, or a file that would not load). In that case the small program that starts LapseCoin (<code>lapsecoin-launch.exe</code>, the one the Start menu uses) sends the report right after Windows ended it. Nothing is sent otherwise, and nothing is sent while the program runs normally.</p>
 <h3>What is sent</h3>
 <ul>
-<li>The error and where in the program it happened (a traceback), and the last few start-up steps.</li>
-<li>The LapseCoin version, the Windows build number, the processor architecture, the Python version, and whether it ran as the Microsoft Store package.</li>
+<li>The error and where in the program it happened (a traceback), the last few start-up steps, and the crash entries Windows itself wrote for it (the file that failed, the error code).</li>
+<li>The LapseCoin version, the Windows version and build number, the processor architecture and the Python version.</li>
 </ul>
-<p>Before it is sent, your account name, folder paths and any LapseCoin address are taken out. Your wallet, keys, recovery phrase, passphrase, balance and transactions are not part of it, and there is no identifier that could link two reports to the same person.</p>
+<p>Before it is sent, these are taken out: your account and computer name, folder paths, LapseCoin addresses, keys and recovery phrases, any value written after a word like passphrase or key, long strings of hex or base64 text, IP addresses and e-mail addresses. Dates and times are replaced by the seconds between steps, so no time zone shows, and the command line is reduced to the names of its options without their values. The cleaning errs on the side of removing too much. Your wallet, keys, recovery phrase, passphrase, balance and transactions are not part of a report, and there is no identifier that could link two reports to the same person.</p>
 <h3>Where it goes</h3>
 <p>The program files it directly as an issue in the public <a href="https://github.com/Lapsecoin/core/issues?q=label%3Acrash-report">LapseCoin issue tracker</a>, labelled crash-report, one issue per kind of crash, with a short comment for each repeat. Anyone can read those issues. GitHub sees your IP address when the report is sent, as with any request to it, and handles it under its own privacy statement. The project does not run a server that receives these reports and does not keep your address.</p>
 <h3>Turning it off</h3>
@@ -47,10 +47,6 @@
 <section id="website">
 <h2>This website</h2>
 <p>The website is hosted on GitHub Pages, which keeps server logs under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>. The pages use Google Analytics to count visits. It sets cookies and records usage such as pages viewed, approximate location, browser and device type. You can block it with a browser extension or your browser's tracking settings, and the site works without it. The download page loads the list of releases from this site and links to GitHub for the files.</p>
-</section>
-<section id="store">
-<h2>Microsoft Store</h2>
-<p>If you install LapseCoin from the Microsoft Store, Microsoft handles the download, updates and the usage data it collects about Store apps, under the <a href="https://www.microsoft.com/privacy/privacystatement">Microsoft privacy statement</a>. We receive aggregated figures from Partner Center, not information about individual people.</p>
 </section>
 <section id="rights">
 <h2>Your choices</h2>
@@ -61,6 +57,6 @@
 <h2>Changes and contact</h2>
 <p>If this policy changes, the date at the top changes with it, and the history is public in the <a href="https://github.com/Lapsecoin/lapsecoin.github.io">site repository</a>. Questions can go to us on <a href="https://discord.gg/FP2d8JmK6r">Discord</a> or as an issue on <a href="https://github.com/Lapsecoin/core/issues">GitHub</a>.</p>
 </section>
-</div><aside class="toc" aria-label="On this page"><b>On this page</b><a href="#summary">In short</a><a href="#app">The LapseCoin program</a><a href="#crashes">Crash reports</a><a href="#website">This website</a><a href="#store">Microsoft Store</a><a href="#rights">Your choices</a><a href="#changes">Changes and contact</a></aside>
+</div><aside class="toc" aria-label="On this page"><b>On this page</b><a href="#summary">In short</a><a href="#app">The LapseCoin program</a><a href="#crashes">Crash reports</a><a href="#website">This website</a><a href="#rights">Your choices</a><a href="#changes">Changes and contact</a></aside>
 </div>
 </div>
